@@ -1,0 +1,26 @@
+{
+  "name": "gsb2048-backend",
+  "version": "1.0.0",
+  "description": "2048 棋盘合并与撤销回放后端（TypeScript + Node.js + SQLite，仅 API 与 CLI）",
+  "type": "module",
+  "main": "dist-build/src/cli.js",
+  "bin": {
+    "gsb2048": "dist-build/src/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node --no-warnings dist-build/src/cli.js serve",
+    "serve": "node --no-warnings dist-build/src/cli.js serve",
+    "cli": "node --no-warnings dist-build/src/cli.js",
+    "test": "tsc -p tsconfig.json && node --test \"dist-build/test/*.test.js\"",
+    "demo": "tsc -p tsconfig.json && node --no-warnings dist-build/src/demo.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
+}
